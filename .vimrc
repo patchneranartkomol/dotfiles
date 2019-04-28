@@ -1,6 +1,3 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required for Vundle
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -63,4 +60,4 @@ set tags=tags;/
 set background=dark
 let g:solarized_use16 = 1
 colorscheme solarized8_high
-let g:airline_theme='murmur'
+let g:airline_theme='solarized'
