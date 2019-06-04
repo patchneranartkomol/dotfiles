@@ -126,3 +126,5 @@ fi
 
 # set vi mode keys
 set -o vi
+export VISUAL=vim
+export EDITOR="$VISUAL"
