@@ -1,3 +1,4 @@
+set nocompatible
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -35,7 +36,6 @@ filetype plugin indent on    " required for Vundle
 set showcmd             " show command in bottom bar
 set nosmd               " no showmode
 
-syntax enable    " enable syntax processing
 
 set tabstop=4       " number of visual spaces per TAB
 set expandtab       " tabs are spaces
@@ -57,7 +57,11 @@ set wildmenu
 set tags=tags;/
 
 " Theme options
-set background=dark
-let g:solarized_use16 = 1
-colorscheme solarized8_high
+set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 let g:airline_theme='solarized'
+set background=dark
+colorscheme solarized8_high
+
+syntax enable    " enable syntax processing
