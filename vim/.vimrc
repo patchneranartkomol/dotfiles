@@ -21,6 +21,7 @@ Plug 'leafgarland/typescript-vim'
 " Airline and themes
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'lepture/vim-jinja'
 
 call plug#end()
 
@@ -101,7 +102,10 @@ autocmd filetype javascriptreact set sw=2 ts=2 expandtab
 let g:acp_completeoptPreview=1
 
 " Mako/HTML
-autocmd BufNewFile,BufRead .mako,.mak,*.jinja2 setlocal ft=html
+"au BufNewFile,BufRead *.html,*.htm,*.shtml,*.stm,.mako,.mak,*.jinja2,*.js set ft=jinja
+" Comment out *.js filetype if working on a JS project. Only used for JS jinja
+au BufNewFile,BufRead *.html,*.htm,*.shtml,*.stm,.mako,.mak,*.jinja2 set ft=jinja
+" template syntax highlighting
 autocmd FileType html,xhtml,xml,css setlocal expandtab shiftwidth=2 tabstop=2
 
 " Python
@@ -264,3 +268,47 @@ let g:echodoc#type = 'popup'
 " To use a custom highlight for the popup window,
 " " change Pmenu to your highlight group
 highlight link EchoDocPopup Pmenu
+
+" air-line
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+
+" Save undo-tree in files
+if !isdirectory($HOME."/.vim")
+    call mkdir($HOME."/.vim", "", 0770)
+endif
+if !isdirectory($HOME."/.vim/undo-dir")
+    call mkdir($HOME."/.vim/undo-dir", "", 0700)
+endif
+set undodir=~/.vim/undo-dir
+set undofile
+
+" number of undo saved
+set undolevels=10000
+set undoreload=10000
