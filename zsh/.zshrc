@@ -6,6 +6,7 @@ autoload -Uz compinit; compinit
 # autocomplete hidden files
 _comp_options+=(globdots)
 source ~/dotfiles/zsh/external/completion.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 autoload -Uz prompt_purification_setup && prompt_purification_setup
 autoload -Uz cursor_mode && cursor_mode
@@ -30,3 +31,14 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
+
+if [ $(command -v "fzf") ]; then
+    source /usr/share/fzf/completion.zsh
+    source /usr/share/fzf/key-bindings.zsh
+fi
+
+# Zsh does not read .inputrc for beep/bell settings
+# Turn off all beeps
+unsetopt BEEP
+# Turn off autocomplete beeps
+# unsetopt LIST_BEEP
