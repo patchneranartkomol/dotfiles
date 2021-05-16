@@ -42,3 +42,9 @@ fi
 unsetopt BEEP
 # Turn off autocomplete beeps
 # unsetopt LIST_BEEP
+
+# startx immediately after login
+if [ "$(tty)" = "/dev/tty1" ];
+then
+    pgrep i3 || exec startx "$XDG_CONFIG_HOME/X11/.xinitrc"
+fi
