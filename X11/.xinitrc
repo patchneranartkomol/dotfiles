@@ -10,5 +10,7 @@
 # Start URxvt Daemon process
 urxvtd -o -q -f
 
+udiskie &
+
 # Start i3 at the end of file - after resources loaded
 exec i3
