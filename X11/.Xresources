@@ -71,7 +71,7 @@ URxvt.keysym.Control-Meta-v: builtin-string;
 *color15:               S_base3
 
 !! Set font
-URxvt*font: xft:DejaVu Sans Mono for Powerline:size14:antialias=true,xft:PowerlineSymbols:size=14
+URxvt*font: xft:DejaVu Sans Mono for Powerline:size=12:antialias=true,xft:PowerlineSymbols:size=10,xft:Source Code Pro for Powerline:size=10:antialias=true
 
 !! Window defaults
 URxvt*borderless: false

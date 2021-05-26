@@ -56,7 +56,7 @@ set ignorecase
 set smartcase
 
 " Allow backspacing over autoindent, line breaks and start of insert action
-set backspace=indent,eol,start
+" set backspace=indent,eol,start
 
 " Always display the status line, even if only one window is displayed
 set laststatus=2
@@ -115,7 +115,7 @@ au FileType python setlocal expandtab shiftwidth=4 tabstop=4 smartindent cinword
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 au FileType python set foldmethod=indent foldlevel=99
 
-set nosmd               " no showmode
+set nosmd               " no showmode - mode should be shown by airline plugin
 set hlsearch
 
 " Theme options

@@ -4,7 +4,7 @@
 #
 # Executed by startx (run your window manager from here)
 
-# xset +fp ~/.local/share/fonts
+xset +fp ~/.local/share/fonts
 [[ -f ~/.config/X11/.Xresources ]] && xrdb -merge -I$HOME ~/.config/X11/.Xresources
 
 # Start URxvt Daemon process

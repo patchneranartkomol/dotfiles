@@ -8,7 +8,9 @@ _comp_options+=(globdots)
 source ~/dotfiles/zsh/external/completion.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-autoload -Uz prompt_purification_setup && prompt_purification_setup
+setopt prompt_subst
+source ~/dotfiles/zsh/external/agnoster.zsh
+
 autoload -Uz cursor_mode && cursor_mode
 
 # Push the current directory visited onto the stack
