@@ -10,6 +10,8 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 setopt prompt_subst
 source ~/dotfiles/zsh/external/agnoster.zsh
+# See solarized LS_COLORS https://github.com/trapd00r/LS_COLORS
+source "/home/patch/.config/cache/lscolors.sh"
 
 autoload -Uz cursor_mode && cursor_mode
 
@@ -50,3 +52,6 @@ if [ "$(tty)" = "/dev/tty1" ];
 then
     pgrep i3 || exec startx "$XDG_CONFIG_HOME/X11/.xinitrc"
 fi
+
+# aliases
+alias ls='ls --color=auto'
