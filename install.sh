@@ -17,3 +17,6 @@ rm -rf "$XDG_CONFIG_HOME/zsh/external"
 ln -sf "$DOTFILES/zsh/external" "$XDG_CONFIG_HOME/zsh"
 
 ln -sf "$DOTFILES/tmux/.tmux.conf" "$HOME/.tmux.conf"
+
+# Link specific RC files - kept in /user
+ln -sf "$DOTFILES/user/.inputrc" "$HOME/.inputrc"
