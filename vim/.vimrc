@@ -115,6 +115,17 @@ au FileType python setlocal expandtab shiftwidth=4 tabstop=4 smartindent cinword
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 au FileType python set foldmethod=indent foldlevel=99
 
+" Java
+"
+au FileType java set shiftwidth=4 tabstop=4 autoindent
+let java_comment_strings=1
+let java_highlight_java_lang_ids=1
+let java_highlight_all=1
+let java_highlight_debug=1
+
+" ===========================================================
+" Theme settings
+" ===========================================================
 set nosmd               " no showmode - mode should be shown by airline plugin
 set hlsearch
 
