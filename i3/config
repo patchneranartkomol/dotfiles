@@ -182,24 +182,24 @@ bindsym $mod+r mode "resize"
 focus_follows_mouse no
 
 # Add lock screen blur script
-set $i3lockwall sh ~/.config/i3/scripts/lock.sh
+# set $i3lockwall sh ~/.config/i3/scripts/lock.sh
 
 # Locking keybind
-bindsym $mod+CTRL+Shift+l exec --no-startup-id $i3lockwall
+# bindsym $mod+CTRL+Shift+l exec --no-startup-id $i3lockwall
 
 # Lock/Shutdown/Reboot menu
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (CTRL+s) shutdown
+# set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (CTRL+s) shutdown
 
-mode "$mode_system" {
-        bindsym l exec --no-startup-id $i3lockwall, mode "default"
-        bindsym e exec --no-startup-id i3-msg exit, mode "default"
-        bindsym s exec --no-startup-id $i3lockwall && systemctl suspend, mode "default"
-        bindsym h exec --no-startup-id $i3lockwall && systemctl hibernate, mode "default"
-        bindsym r exec --no-startup-id systemctl reboot, mode "default"
-        bindsym CTRL+s exec --no-startup-id systemctl poweroff -i, mode "default"
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
+# mode "$mode_system" {
+#        bindsym l exec --no-startup-id $i3lockwall, mode "default"
+#        bindsym e exec --no-startup-id i3-msg exit, mode "default"
+#        bindsym s exec --no-startup-id $i3lockwall && systemctl suspend, mode "default"
+#        bindsym h exec --no-startup-id $i3lockwall && systemctl hibernate, mode "default"
+#        bindsym r exec --no-startup-id systemctl reboot, mode "default"
+#        bindsym CTRL+s exec --no-startup-id systemctl poweroff -i, mode "default"
+#        bindsym Return mode "default"
+#        bindsym Escape mode "default"
+#}
 
 bindsym $mod+BackSpace mode "$mode_system"
 
@@ -268,13 +268,13 @@ for_window [class="URxvt*"] border pixel 1
 
 # Terminal scratchpad
 for_window [instance="urxvt_scratchpad"] move to scratchpad, border none
-bindsym $mod+Shift+t [instance="urxvt_scratchpad"] scratchpad show
-exec urxvtc -name urxvt_scratchpad
+# bindsym $mod+Shift+t [instance="urxvt_scratchpad"] scratchpad show
+# exec urxvtc -name urxvt_scratchpad
 
 # htop scratchpad
 for_window [instance="htop_scratchpad"] move to scratchpad, border none
-bindsym $mod+Shift+p [instance="htop_scratchpad"] scratchpad show
-exec urxvtc -name htop_scratchpad -e htop
+# bindsym $mod+Shift+p [instance="htop_scratchpad"] scratchpad show
+# exec urxvtc -name htop_scratchpad -e htop
 
 # Start Redshift
 exec --no-startup-id redshift
