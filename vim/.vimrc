@@ -129,6 +129,10 @@ let java_highlight_debug=1
 set nosmd               " no showmode - mode should be shown by airline plugin
 set hlsearch
 
+" C
+"
+au FileType c set shiftwidth=4 tabstop=4 autoindent
+
 " Theme options
 set background=dark
 
