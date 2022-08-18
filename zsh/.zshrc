@@ -45,7 +45,7 @@ fi
 # Turn off all beeps
 unsetopt BEEP
 # Turn off autocomplete beeps
-# unsetopt LIST_BEEP
+unsetopt LIST_BEEP
 
 # startx immediately after login
 if [ "$(tty)" = "/dev/tty1" ];

@@ -123,6 +123,11 @@ let java_highlight_java_lang_ids=1
 let java_highlight_all=1
 let java_highlight_debug=1
 
+
+" Go
+"
+au FileType go setlocal expandtab shiftwidth=4 tabstop=4
+
 " ===========================================================
 " Theme settings
 " ===========================================================
