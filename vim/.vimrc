@@ -126,7 +126,7 @@ let java_highlight_debug=1
 
 " Go
 "
-au FileType go setlocal expandtab shiftwidth=4 tabstop=4
+au FileType go setlocal shiftwidth=4 tabstop=4 autoindent
 
 " ===========================================================
 " Theme settings
