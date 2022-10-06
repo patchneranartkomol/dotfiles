@@ -1,5 +1,6 @@
 #!/bin/bash
 ln -sf "$DOTFILES/vim/.vimrc" "$HOME/.vimrc"
+ln -s "$DOTFILES/nvim/init.vim" "$XDG_CONFIG_HOME/nvim/init.vim"
 
 rm -rf "$XDG_CONFIG_HOME/X11"
 ln -sf "$DOTFILES/X11" "$XDG_CONFIG_HOME"
