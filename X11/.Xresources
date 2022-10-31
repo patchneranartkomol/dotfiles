@@ -81,7 +81,7 @@ URxvt*internalBorder: 4
 URxvt*scrollBar: false
 
 URxvt*saveLines: 5000
-URxvt.letterSpace: 0
+URxvt.letterSpace: -1
 
 !! Tab Controls
 URxvt.keysym.Shift-Control-N: perl:tabbedex:new_tab
