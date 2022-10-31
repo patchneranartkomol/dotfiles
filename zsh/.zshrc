@@ -55,3 +55,10 @@ fi
 
 # aliases
 alias ls='ls --color=auto'
+
+# Add local bins
+path+=('/home/patch/.local/bin')
+export PATH
+
+# bat utility theme
+export BAT_THEME="Solarized (dark)"
