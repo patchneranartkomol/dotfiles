@@ -25,3 +25,4 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Add personal ~/bin folder to PATH
 export PATH=~/bin:$PATH
+export PATH=/home/patch/.config/cache/gem/ruby/3.0.0/bin:$PATH
