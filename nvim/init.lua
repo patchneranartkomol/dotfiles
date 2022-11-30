@@ -9,4 +9,4 @@ vim.cmd('colorscheme solarized-dark')
 -- in %XDG_CONFIG_HOME/nvim/pack/
 
 -- Load specific configs
-require('lspsettings') -- lua/lspsettings.lua
+require('lsp-settings') -- lua/lsp-settings.lua
