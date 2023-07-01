@@ -114,6 +114,7 @@ require'lspconfig'.gopls.setup{
 require'lspconfig'.solargraph.setup{
     on_attach = on_attach,
 }
+require'lspconfig'.clangd.setup{}
 
 -- Setup additional language servers
 -- require('lspconfig')['tsserver'].setup{

@@ -62,3 +62,6 @@ export PATH
 
 # bat utility theme
 export BAT_THEME="Solarized (dark)"
+
+# Load rbenv
+eval "$(rbenv init - zsh)"
